@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.borgar {
+    display: none;
+}
+.show {
+    display: block !important;
+}
+@media screen and (max-width: 426px) {
+    .nav-menu {
+        display: none;
+    }
+    .borgar {
+        display: block;
+    }
+}

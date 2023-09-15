@@ -2,7 +2,6 @@ function fetchJSON() {
     fetch('../public/data/data.json')
     .then(response => response.json())
     .then(data => {
-        console.log(data);
         const unOrderedList = document.createElement("ul");
         data.forEach(obj => {            
             const listItem = document.createElement("li");
@@ -10,6 +9,7 @@ function fetchJSON() {
             link.href = obj.url; 
             link.textContent = obj.title;
             listItem.appendChild(link);
+            unOrderedList.classList.add("nav-menu");
             unOrderedList.appendChild(listItem);
         });
        document.body.appendChild(unOrderedList);
@@ -17,4 +17,8 @@ function fetchJSON() {
     .catch(error => console.log(error));
 }
 fetchJSON();
-
+document.addEventListener("DOMContentLoaded", ()=>{
+    document.querySelector(".borgar").addEventListener("click", ()=>{
+        document.querySelector(".nav-menu").classList.toggle("show")
+    });
+});
