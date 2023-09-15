@@ -1,0 +1,6 @@
+[
+    {"title": "home","url" : "/"},
+    {"title" : "producten","url" : "/producten/"},
+    {"title": "Overons","url" : "/overons/"},
+    {"title": "contact","url" : "/contact/"}
+]
